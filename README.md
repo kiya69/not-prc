@@ -1,4 +1,4 @@
-Keystone Demo
+Fork from Keystone Demo
 =============
 
 This site is an example of a default [Keystone](http://keystonejs.com) application.
