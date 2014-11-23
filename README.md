@@ -8,19 +8,13 @@ Try it out at http://demo.keystonejs.com
 Pull requests are welcome, and if you'd like to see additional demos just open a new issue to let us know.
 
 ##TODO
-Change Contact and Enquiry to Repot a Case and Case List.
-
-Change Blog into Template.
-
-Blog Catagory can be the drop down list in the Repoty A Case From.
-
-Front Page: Explain why
-
-中文？English?
-
-用 crawler 自己上網爬關鍵字
-
-Reference: [Mockup](https://g0vus.mybalsamiq.com/projects/prc/prototype/home?key=70bd51fb29eff84529e3304b9c0eab6c8c966799)
+*  Change Contact and Enquiry to Repot a Case and Case List.
+*  Change Blog into Template.
+*  Blog Catagory can be the drop down list in the Repoty A Case From.
+*  Front Page: Explain why
+*  中文？English?
+*  用 crawler 自己上網爬關鍵字
+*  Reference: [Mockup](https://g0vus.mybalsamiq.com/projects/prc/prototype/home?key=70bd51fb29eff84529e3304b9c0eab6c8c966799)
 
 ## Using this as a basis for your own project
 
