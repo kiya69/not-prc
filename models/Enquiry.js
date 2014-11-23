@@ -27,13 +27,13 @@ Enquiry.add({
     type: Types.Select,
     options: [{
       value: 'message',
-      label: "Just leaving a message"
+      label: "US"
     }, {
       value: 'question',
-      label: "I've got a question"
+      label: "International - General"
     }, {
       value: 'other',
-      label: "Something else..."
+      label: "International - UK"
     }]
   },
   message: {
@@ -70,10 +70,10 @@ Enquiry.schema.methods.sendNotificationEmail = function(callback) {
     new keystone.Email('enquiry-notification').send({
       to: admins,
       from: {
-        name: 'My Site',
+        name: 'Taiwan != PRC',
         email: 'kiya69@gmail.com'
       },
-      subject: 'New Enquiry for My Site',
+      subject: 'New Case Reported',
       enquiry: enqiury
     }, callback);
 

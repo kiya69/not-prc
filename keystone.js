@@ -11,9 +11,9 @@ var keystone = require('keystone');
 
 keystone.init({
 
-  'name': 'My Site',
-  'brand': 'My Site',
-
+  'name': 'Taiwan != PRC',
+  'brand': 'Taiwan != PRC',
+  'title': 'Taiwan != PRC',
   'less': 'public',
   'static': 'public',
   'favicon': 'public/favicon.ico',
