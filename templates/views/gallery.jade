@@ -1,53 +1,25 @@
 extends ../layouts/default
 
-block css
-	link(rel="stylesheet", href="/js/lib/fancybox/jquery.fancybox.css")
-				
-block content
-	h1 Gallery
+block intro
+	.container
+		h1 Gallery
 	
-	//- p.lead This is an example image gallery, demonstrating how you can use images with Keystone and Cloudinary.
-	//- p.lead Please follow us for updates to the demo site.
-
-	if galleries.length
-		
-		each gallery, i in galleries
-			if i
-				hr
-			h3= gallery.name
-				|  
-				small.text-muted= gallery._.publishedDate.format('Do MMM YYYY')
-			
-			.gallery-images
-				if gallery.heroImage.exists
-					.row
-						.col-xs-12
-							a(href=gallery._.heroImage.limit(900,600), title=gallery.name + ' hero image', rel='gallery').gallery-image
-								img(src=gallery._.heroImage.limit(640,640), alt=gallery.name + ' hero image')
-				.row
-					each image, i in gallery.images
-						.col-xs-6.col-sm-4.col-md-3
-							a(href=image.limit(900,600), title=gallery.name + ' image ' + (i+1), rel='gallery').gallery-image
-								img(src=image.fill(300,300), alt=gallery.name + ' image ' + (i+1))
-		
-	else
-		.jumbotron.text-center
-			.lead.text-muted There are no image galleries in the database.
-
-
-block page-js
-	script(src='/js/lib/bootstrap/modal.js')
-	script(src='/js/lib/bootstrap/carousel.js')
-	script(src="/js/lib/fancybox/jquery.fancybox.pack.js")
-	script.
-		jQuery(function($) {
-			$('.gallery-images').find('.gallery-image').fancybox({
-				prevEffect: 'none',
-				nextEffect: 'none',
-				closeBtn: false,
-				helpers: {
-					titl: {},
-					buttons: {}
-				}
-			});
-		});
+block content
+	.container
+		if galleries.length
+			each gallery in galleries
+				h2= gallery.name
+					if gallery.publishedDate
+						.pull-right.text-muted= gallery._.publishedDate.format('Do MMM YYYY')
+				
+				.row.gallery-images
+					if gallery.heroImage.exists
+						.col-sm-4.col-md-4.gallery-image: img(src=gallery._.heroImage.limit(680,680)).img-rounded
+						.col-sm-8.col-md-8: .row
+							each image in gallery.images
+								.col-xs-4.col-sm-4.col-md-3.gallery-image: img(src=image.limit(300,300)).img-rounded
+					else
+						each image in gallery.images
+							.col-xs-6.col-sm-4.col-md-3.gallery-image: img(src=image.limit(300,300)).img-rounded
+		else
+			h3.text-muted There are no image galleries yet.
