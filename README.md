@@ -12,6 +12,8 @@ Change Contact and Enquiry to Repot a Case and Case List.
 
 Change Blog into Template.
 
+Blog Catagory can be the drop down list in the Repoty A Case From
+
 Reference: [Mockup](https://g0vus.mybalsamiq.com/projects/prc/prototype/home?key=70bd51fb29eff84529e3304b9c0eab6c8c966799)
 
 ## Using this as a basis for your own project
