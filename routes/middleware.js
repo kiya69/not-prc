@@ -26,20 +26,21 @@ exports.initLocals = function(req, res, next) {
   var locals = res.locals;
 
   locals.navLinks = [
-  // {
-  //   label: 'Home',
-  //   key: 'home',
-  //   href: '/'
-  // },
-  {
-    label: 'Case列表',
-    key: 'caselist',
-    href: '/caselist'
-  }, {
-    label: 'Report A Case',
-    key: 'report',
-    href: '/report'
-  }];
+    // {
+    //   label: 'Home',
+    //   key: 'home',
+    //   href: '/'
+    // },
+    {
+      label: 'Case列表',
+      key: 'caselist',
+      href: '/caseList'
+    }, {
+      label: 'Report A Case',
+      key: 'report',
+      href: '/report'
+    }
+  ];
 
   locals.user = req.user;
 
