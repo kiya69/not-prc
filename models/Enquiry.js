@@ -30,10 +30,10 @@ Enquiry.add({
       label: "US"
     }, {
       value: 'question',
-      label: "International - General"
+      label: "International - English"
     }, {
       value: 'other',
-      label: "International - UK"
+      label: "International - Franch"
     }]
   },
   message: {
